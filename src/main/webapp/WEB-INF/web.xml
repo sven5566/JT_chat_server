@@ -22,7 +22,7 @@
 
     <!--映射-->
     <servlet-mapping>
-        <servlet-name>ITalkerApiServlet</servlet-name>
+        <servlet-name>JtChatApiServlet</servlet-name>
         <!--访问路径-->
         <url-pattern>/api/*</url-pattern>
     </servlet-mapping>
