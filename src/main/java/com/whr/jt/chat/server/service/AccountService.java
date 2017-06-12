@@ -1,10 +1,9 @@
 package com.whr.jt.chat.server.service;
 
+import com.whr.jt.chat.server.bean.api.account.RegisterModel;
 import com.whr.jt.chat.server.bean.db.User;
 
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 /**
@@ -12,12 +11,19 @@ import javax.ws.rs.core.MediaType;
  */
 @Path("/account")
 public class AccountService {
-    @POST
-    @Path("/login")
-    @Produces(MediaType.APPLICATION_JSON)
-    public User get(){
-        User item=new User();
+    @GET
+    @Path("/test")
+    public String register(){
+        return "asdf";
+    }
 
+    @POST
+    @Path("/register")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public User register(RegisterModel model){
+        User item=new User();
+        item.setName(model.getName());
         return item;
     }
 }
