@@ -1,8 +1,7 @@
 package com.whr.jt.chat.server.service;
 
-import com.whr.jt.chat.server.bean.UserTest;
+import com.whr.jt.chat.server.bean.db.User;
 
-import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -16,8 +15,8 @@ public class AccountService {
     @POST
     @Path("/login")
     @Produces(MediaType.APPLICATION_JSON)
-    public UserTest get(){
-        UserTest item=new UserTest("asdf",2);
+    public User get(){
+        User item=new User();
 
         return item;
     }
